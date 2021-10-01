@@ -23,24 +23,22 @@ namespace CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
         private void fTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F1)
             {
-                TextBox textoAComprobar = sender as TextBox;
+                TextBox textBoxAComprobar = sender as TextBox;
 
-                if (textoAComprobar == nombreTextBox)
-                    ayudaNombreTextBlock.Text = textoAComprobar.Tag.ToString();
+                if (textBoxAComprobar == nombreTextBox)
+                    ayudaNombreTextBlock.Text = textBoxAComprobar.Tag.ToString();
                 else
-                    ayudaApellidoTextBlock.Text = textoAComprobar.Tag.ToString();
+                    ayudaApellidoTextBlock.Text = textBoxAComprobar.Tag.ToString();
                  
             }
             if (e.Key == Key.F2)
             {
-               
                 validarEdadTextBlock.Text = Int32.TryParse(edadTextBox.Text.ToString(), out _) ? "" : "Edad incorrecta";
             }
 
